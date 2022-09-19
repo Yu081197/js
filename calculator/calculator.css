@@ -1,0 +1,27 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contaner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal {
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: solid 6px #ffffff;
+}
+
+.display {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
