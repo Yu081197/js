@@ -4,46 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="calculator.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="container">
-        <h1>계산기</h1>
-        <div class="cal">
-            <div class="display">000</div>
-            <div class="button">
-                <div class="button__row">
-                    <button class="top_pad">AC</button>
-                    <button class="top_pad">+/-</button>
-                    <button class="top_pad">%</button>
-                </div>
-                <div class="button__row">
-                    <button class="right_pad">÷</button>
-                    <button class="num_pad">7</button>
-                    <button class="num_pad">8</button>
-                    <button class="num_pad">9</button>
-                </div>
-                <div class="button__row">
-                    <button class="right_pad">x</button>
-                    <button class="num_pad">4</button>
-                    <button class="num_pad">5</button>
-                    <button class="num_pad">6</button>
-                    <button class="right_pad">-</button>
-                </div>
-                <div class="button__row">
-                    <button class="num_pad">1</button>
-                    <button class="num_pad">2</button>
-                    <button class="num_pad">3</button>
-                    <button class="right_pad">+</button>
-                </div>
-                <div class="button__row">
-                    <button class="zero_pad">0</button>
-                    <button class="num_pad">.</button>
-                    <button class="right_pad">=</button>
-                </div>
-            </div>
+        <input type="text" value="000" disabled>
+        <div class="button">
+            <button class="ac">AC</button>            
+            <button>&divide;</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>&times;</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button class="zero">0</button>            
+            <button>.</button>
+            <button>=</button>
         </div>
     </div>  
 
