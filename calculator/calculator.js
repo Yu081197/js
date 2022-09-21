@@ -3,6 +3,22 @@ class Calculator {
     this.displayElement = displayElement;
     this.displayContent = "";
   }
+  appendNumber(number) {
+    this.displayContent += number;
+  }
+
+  appendOperator(operator) {
+    this.displayContent += operator;
+  }
+
+  clear() {
+    this.displayContent = "";
+    this.displayElement.value = 0;
+  }
+
+  updateDisplay() {
+    this.displayElement.value = this.displayContent;
+  }
 }
 
 const buttons = document.querySelectorAll("button");
@@ -14,16 +30,18 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     switch (button.dataset.type) {
       case "operator":
-        console.log("operator");
+        calculator.appendOperator(button.innerText);
+        calculator.updateDisplay();
         break;
       case "ac":
-        console.log("ac");
+        calculator.clear();
         break;
       case "equals":
         console.log("equals");
         break;
       default:
-        console.log("number");
+        calculator.appendNumber(button.innerText);
+        calculator.updateDisplay();
         break;
     }
   });
