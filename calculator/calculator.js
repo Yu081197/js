@@ -1,19 +1,29 @@
 class Calculator {
   constructor(displayElement) {
     this.displayElement = displayElement;
-    this.displayContent = "";
+    this.operatorCheck = true;
+    this.clear();
   }
   appendNumber(number) {
     this.displayContent += number;
+    this.operatorCheck = false;
   }
 
   appendOperator(operator) {
+    if (this.operatorCheck) return false;
     this.displayContent += operator;
+    this.operatorCheck = true;
   }
 
   clear() {
     this.displayContent = "";
     this.displayElement.value = 0;
+  }
+
+  equals() {
+    this.displayContent = eval(
+      this.displayContent.replace("\u00D7", "*").replace("\u00F7", "/")
+    );
   }
 
   updateDisplay() {
@@ -37,7 +47,8 @@ buttons.forEach((button) => {
         calculator.clear();
         break;
       case "equals":
-        console.log("equals");
+        calculator.equals();
+        calculator.updateDisplay();
         break;
       default:
         calculator.appendNumber(button.innerText);
